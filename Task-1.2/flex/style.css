@@ -1,0 +1,62 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+/* Header */
+
+header {
+  align-items: center;
+  background-color: #2b57ae;
+  color: white;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+}
+
+/* Main content */
+
+.flex-container {
+  display: flex;
+  min-height: 300px;
+}
+
+.flex-container nav {
+  background-color: #f0bc0f;
+  min-height: 50px;
+  min-width: 15%;
+  padding: 1em;
+}
+
+.flex-container main {
+  padding: 1em;
+  text-align: justify;
+}
+
+.flex-container aside {
+  background-color: #cf68cf;
+  min-height: 50px;
+  min-width: 15%;
+  padding: 1em;
+}
+
+/* Footer */
+
+footer {
+  align-items: center;
+  background-color: #1ea11e;
+  color: white;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
