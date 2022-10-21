@@ -1,7 +1,8 @@
-* {
+html {
   font-family: "Roboto", sans-serif;
 }
 
+body,
 h1,
 h2 {
   margin: 0;
@@ -10,53 +11,69 @@ h2 {
 /* Header */
 
 header {
-  align-items: center;
   background-color: #2b57ae;
   color: white;
-  display: flex;
   height: 100px;
-  justify-content: center;
+}
+
+h1 {
+  font-size: 1.5em;
+  line-height: 100px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
 }
 
 /* Main content */
 
-.flex-container {
+section {
   display: flex;
-  min-height: 300px;
+  min-height: 500px;
 }
 
-.flex-container nav {
+section nav {
   background-color: #f0bc0f;
-  min-height: 50px;
-  min-width: 15%;
-  padding: 1em;
 }
 
-.flex-container main {
+section main {
+  flex: 1;
   padding: 1em;
   text-align: justify;
 }
 
-.flex-container aside {
+section aside {
   background-color: #cf68cf;
-  min-height: 50px;
-  min-width: 15%;
+}
+
+section nav,
+section aside {
+  box-sizing: border-box;
+  flex: 0 0 150px;
   padding: 1em;
 }
 
 /* Footer */
 
 footer {
-  align-items: center;
   background-color: #1ea11e;
   color: white;
-  display: flex;
   height: 100px;
-  justify-content: center;
+}
+
+footer h2 {
+  line-height: 100px;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
-  .flex-container {
+  section {
     flex-direction: column;
+  }
+
+  section nav,
+  section aside {
+    flex: 0 0 70px;
   }
 }
