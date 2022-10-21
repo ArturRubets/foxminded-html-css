@@ -18,8 +18,9 @@ header {
 /* Main content */
 
 section {
-  display: flex;
-  min-height: 600px;
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  min-height: 00px;
 }
 
 section > * {
@@ -28,8 +29,6 @@ section > * {
 
 section nav,
 section aside {
-  box-sizing: border-box;
-  flex: 0 0 150px;
   font-size: 0.8em;
 }
 
@@ -38,7 +37,6 @@ section nav {
 }
 
 section main {
-  flex: 1;
   text-align: justify;
 }
 
@@ -48,12 +46,8 @@ section aside {
 
 @media screen and (max-width: 768px) {
   section {
-    flex-direction: column;
-  }
-
-  section nav,
-  section aside {
-    flex: 0 0 80px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr 80px;
   }
 }
 
