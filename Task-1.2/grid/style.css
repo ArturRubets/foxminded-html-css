@@ -20,7 +20,7 @@ header {
 section {
   display: grid;
   grid-template-columns: 150px 1fr 150px;
-  min-height: 00px;
+  min-height: 600px;
 }
 
 section > * {
