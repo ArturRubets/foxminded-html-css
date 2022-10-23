@@ -17,35 +17,35 @@ header {
 
 /* Main content */
 
-section {
+.wrapper {
   display: grid;
   grid-template-columns: 150px 1fr 150px;
   min-height: 600px;
 }
 
-section > * {
+.wrapper > * {
   padding: 1em;
 }
 
-section nav,
-section aside {
+nav,
+aside {
   font-size: 0.8em;
 }
 
-section nav {
+nav {
   background-color: #f0bc0f;
 }
 
-section main {
+main {
   text-align: justify;
 }
 
-section aside {
+aside {
   background-color: #cf68cf;
 }
 
 @media screen and (max-width: 768px) {
-  section {
+  .wrapper {
     grid-template-columns: 1fr;
     grid-template-rows: 80px 1fr 80px;
   }

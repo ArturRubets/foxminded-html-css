@@ -17,42 +17,42 @@ header {
 
 /* Main content */
 
-section {
+.wrapper {
   display: flex;
   min-height: 600px;
 }
 
-section > * {
+.wrapper > * {
   padding: 1em;
 }
 
-section nav,
-section aside {
+nav,
+aside {
   box-sizing: border-box;
   flex: 0 0 150px;
   font-size: 0.8em;
 }
 
-section nav {
+nav {
   background-color: #f0bc0f;
 }
 
-section main {
+main {
   flex: 1;
   text-align: justify;
 }
 
-section aside {
+aside {
   background-color: #cf68cf;
 }
 
 @media screen and (max-width: 768px) {
-  section {
+  .wrapper {
     flex-direction: column;
   }
 
-  section nav,
-  section aside {
+  nav,
+  aside {
     flex: 0 0 80px;
   }
 }
