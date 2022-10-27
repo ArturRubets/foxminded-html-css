@@ -1,0 +1,152 @@
+/* || General styles */
+
+html {
+  background-color: #548093;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+/* || Form */
+
+form {
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  margin: 2em auto;
+  width: 600px;
+}
+
+/* || Header */
+
+h1 {
+  background-color: #eff0f1;
+  border-bottom: 1px solid #ccc;
+  border-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  color: #666;
+  font-size: 1.3em;
+  font-weight: 500;
+  line-height: 3;
+  margin: 0;
+  text-align: center;
+}
+
+/* || Data input */
+
+*:focus {
+  outline-color: #666;
+}
+
+.inputs-container {
+  display: grid;
+  gap: 1em 0.8em;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1em 2em;
+}
+
+.two-columns {
+  grid-column: 1 / span 2;
+}
+
+.checkbox-radio-wrapper label {
+  color: #333436;
+  font-size: 0.8em;
+}
+
+.checkbox-radio-wrapper p {
+  color: #00bb93;
+}
+
+.checkbox-radio-wrapper p,
+label {
+  margin-bottom: 0.3em;
+}
+
+label {
+  color: #00bb93;
+  display: inline-block;
+}
+
+input,
+select,
+textarea {
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 0.8em;
+  padding: 0.3em 0.5em;
+  width: 100%;
+}
+
+input::placeholder {
+  color: #d9d9d9;
+  font-family: "Roboto", sans-serif;
+}
+
+.checkbox-radio-wrapper input {
+  vertical-align: text-top;
+  width: initial;
+}
+
+.income-wrapper input {
+  margin: 0;
+  padding: 0;
+  vertical-align: -webkit-baseline-middle;
+  width: 80%;
+}
+
+.income-wrapper span {
+  background-color: #00bb93;
+  border-radius: 5px;
+  color: #fdfdfd;
+  padding: 0.3em;
+}
+
+input[type="file"] {
+  border: 0;
+  color: #6b6666;
+  padding: 0;
+}
+
+input::file-selector-button {
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* || Submit */
+
+form > section:last-child {
+  background-color: #eff0f1;
+  border-top: 1px solid #ccc;
+  border-radius: inherit;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 0.7em 2em;
+  text-align: right;
+}
+
+button {
+  background-color: #00bb93;
+  border-radius: 5px;
+  border: 0;
+  color: #fdfdfd;
+  font-size: 1em;
+  padding: 0.6em 1em;
+}
+
+button:hover {
+  background-color: #069475;
+}
+
+button:active {
+  background-color: #00bb93;
+  box-shadow: 0.13em 0.13em 0.31em #ccc;
+}
