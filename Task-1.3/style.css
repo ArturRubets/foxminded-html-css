@@ -1,58 +1,39 @@
 /* || General styles */
-
-:root {
-  --background-page-color: #548093;
-  --border: 1px solid var(--light-grey);
-  --dark-green: #069475;
-  --dark-grey: #666;
-  --font-family: "Roboto", sans-serif;
-  --green: #00bb93;
-  --header-and-footer-color: #eff0f1;
-  --header-font-size: 1.5em;
-  --label-font-size: 1.2em;
-  --light-grey: #ccc;
-  --text-font-size: 1em;
-  --white: #fdfdfd;
-}
-
 html {
-  background-color: var(--background-page-color);
-  font-family: var(--font-family);
+  background-color: #548093;
+  font-family: "Roboto", sans-serif;
 }
 
+h1,
 p {
   margin: 0;
 }
 
 /* || Form */
-
 form {
-  background-color: var(--white);
+  background-color: #fdfdfd;
   border-radius: 10px;
   margin: 2em auto;
   width: 700px;
 }
 
 /* || Header */
-
 h1 {
-  background-color: var(--header-and-footer-color);
-  border-bottom: var(--border);
+  background-color: #eff0f1;
+  border-bottom: 1px solid #ccc;
   border-radius: inherit;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  color: var(--dark-grey);
-  font-size: var(--header-font-size);
+  color: #666;
+  font-size: 1.5em;
   font-weight: 500;
   line-height: 3;
-  margin: 0;
   text-align: center;
 }
 
 /* || Data input */
-
 *:focus {
-  outline-color: var(--dark-grey);
+  outline-color: #666;
 }
 
 .inputs-container {
@@ -66,87 +47,75 @@ h1 {
   grid-column: 1 / span 2;
 }
 
-.checkbox-radio-wrapper p,
 label {
-  margin-bottom: 0.3em;
-}
-
-.checkbox-radio-wrapper p {
-  color: var(--green);
-  font-size: var(--label-font-size);
-}
-
-.checkbox-radio-wrapper label {
-  color: var(--dark-grey);
-  font-size: var(--text-font-size);
-}
-
-label {
-  color: var(--green);
+  color: #00bb93;
   display: inline-block;
-  font-size: var(--label-font-size);
+  font-size: 1.2em;
+  margin-bottom: 0.3em;
 }
 
 input,
 select,
 textarea {
   border-radius: 3px;
-  border: var(--border);
+  border: 1px solid #ccc;
   box-sizing: border-box;
-  font-size: var(--text-font-size);
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
   padding: 0.3em 0.5em;
   width: 100%;
 }
 
 input::placeholder {
-  color: var(--light-grey);
-  font-family: var(--font-family);
+  color: #ccc;
+}
+input[type="file"] {
+  border: 0;
+  color: #666;
+  padding: 0;
+}
+input::file-selector-button {
+  background-color: #fdfdfd;
+  border-radius: 3px;
+  border: 1px solid #ccc;
 }
 
+textarea {
+  max-height: 300px;
+  min-height: 100px;
+  resize: vertical;
+}
+
+.checkbox-radio-wrapper p {
+  color: #00bb93;
+  font-size: 1.2em;
+  margin-bottom: 0.3em;
+}
+.checkbox-radio-wrapper label {
+  color: #666;
+  font-size: 1em;
+}
 .checkbox-radio-wrapper input {
   vertical-align: text-top;
   width: initial;
 }
 
 .income-wrapper input {
-  margin: 0;
-  padding: 0;
-  vertical-align: -webkit-baseline-middle;
+  vertical-align: middle;
   width: 80%;
 }
-
 .income-wrapper span {
-  background-color: var(--green);
+  background-color: #00bb93;
   border-radius: 5px;
-  color: var(--white);
-  font-size: var(--label-font-size);
+  color: #fdfdfd;
+  font-size: 1.2em;
   padding: 0.3em;
 }
 
-input[type="file"] {
-  border: 0;
-  color: var(--dark-grey);
-  padding: 0;
-}
-
-input::file-selector-button {
-  background-color: var(--white);
-  border-radius: 3px;
-  border: var(--border);
-}
-
-textarea {
-  font-family: var(--font-family);
-  max-height: 300px;
-  min-height: 100px;
-  resize: vertical;
-}
-
 /* || Submit */
-
 form > section:last-child {
-  background-color: var(--header-and-footer-color);
-  border-top: var(--border);
+  background-color: #eff0f1;
+  border-top: 1px solid #ccc;
   border-radius: inherit;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -155,20 +124,20 @@ form > section:last-child {
 }
 
 button {
-  background-color: var(--green);
+  background-color: #00bb93;
   border-radius: 5px;
   border: 0;
-  color: var(--white);
+  color: #fdfdfd;
   cursor: pointer;
-  font-size: var(--label-font-size);
+  font-size: 1em;
   padding: 0.6em 1em;
 }
-
 button:hover {
-  background-color: var(--dark-green);
+  background-color: #069475;
+}
+button:active {
+  background-color: #00bb93;
+  box-shadow: 0.13em 0.13em 0.31em #ccc;
 }
 
-button:active {
-  background-color: var(--green);
-  box-shadow: 0.13em 0.13em 0.31em var(--light-grey);
-}
+/*# sourceMappingURL=style.css.map */
