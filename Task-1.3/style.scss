@@ -4,7 +4,7 @@ $background-page-color: #548093;
 $border: 1px solid #ccc;
 $dark-green: #069475;
 $dark-grey: #666;
-$font-family: "Roboto", sans-serif;
+$font-family: 'Roboto', sans-serif;
 $green: #00bb93;
 $grey: #ccc;
 $header-font-size: 1.5em;
@@ -66,7 +66,7 @@ h1 {
 
 label {
   color: $green;
-  display: inline-block;
+  display: block;
   font-size: $label-font-size;
   margin-bottom: 0.3em;
 }
@@ -87,7 +87,7 @@ input {
   &::placeholder {
     color: $grey;
   }
-  &[type="file"] {
+  &[type='file'] {
     border: 0;
     color: $dark-grey;
     padding: 0;
@@ -114,6 +114,7 @@ textarea {
 
   label {
     color: $dark-grey;
+    display: inline-block;
     font-size: $text-font-size;
   }
 
@@ -127,10 +128,10 @@ textarea {
   input {
     padding: 0;
     vertical-align: middle;
-    width: 80%;
+    width: 79%;
   }
 
-  span {
+  > span {
     background-color: $green;
     border-radius: 5px;
     color: $white;
