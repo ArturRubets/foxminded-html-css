@@ -13,6 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <form action="" method="">
@@ -26,6 +27,7 @@
             id="first-name"
             name="first_name"
             placeholder="enter your first name"
+            required
           />
         </div>
 
@@ -46,6 +48,7 @@
             id="mail"
             name="mail"
             placeholder="enter your email"
+            required
           />
         </div>
 
@@ -56,6 +59,7 @@
             id="pwd"
             name="password"
             placeholder="enter your password"
+            required
           />
         </div>
 
@@ -66,6 +70,7 @@
             id="cpwd"
             name="confirm_password"
             placeholder="enter your password again"
+            required
           />
         </div>
 
@@ -105,8 +110,15 @@
 
         <div class="income-wrapper">
           <label for="income">Income</label>
-          <input type="range" id="income" name="income" />
-          <span>20K</span>
+          <input
+            type="range"
+            id="income"
+            name="income"
+            min="0"
+            max="200"
+            value="0"
+          />
+          <span><span id="income-output"></span>K</span>
         </div>
 
         <div>

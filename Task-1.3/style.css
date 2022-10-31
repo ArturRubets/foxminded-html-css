@@ -49,7 +49,7 @@ h1 {
 
 label {
   color: #00bb93;
-  display: inline-block;
+  display: block;
   font-size: 1.2em;
   margin-bottom: 0.3em;
 }
@@ -93,6 +93,7 @@ textarea {
 }
 .checkbox-radio-wrapper label {
   color: #666;
+  display: inline-block;
   font-size: 1em;
 }
 .checkbox-radio-wrapper input {
@@ -103,9 +104,9 @@ textarea {
 .income-wrapper input {
   padding: 0;
   vertical-align: middle;
-  width: 80%;
+  width: 79%;
 }
-.income-wrapper span {
+.income-wrapper > span {
   background-color: #00bb93;
   border-radius: 5px;
   color: #fdfdfd;
