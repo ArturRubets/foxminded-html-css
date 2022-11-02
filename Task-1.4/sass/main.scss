@@ -1,0 +1,94 @@
+/* || General styles */
+
+$animation-duration: 0.5s;
+$color-pacman: #ffcc00;
+$radius-pacman: 35px;
+
+body {
+  align-items: center;
+  background: #1e1e1e;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  height: 50vh;
+  width: 50vw;
+}
+
+/* || Pacman */
+
+.pacman {
+  position: relative;
+  transform: translateX(-$radius-pacman / 2);
+  z-index: 1;
+
+  &::before,
+  &::after {
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: -$radius-pacman;
+  }
+
+  &::before {
+    animation: $animation-duration ease infinite alternate chunk-top;
+    border: $radius-pacman solid $color-pacman;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+  }
+
+  &::after {
+    animation: $animation-duration ease infinite alternate chunk-bottom;
+    border: $radius-pacman solid $color-pacman;
+    border-right-color: transparent;
+    border-top-color: transparent;
+  }
+}
+
+@keyframes chunk-top {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(-80deg);
+  }
+}
+
+@keyframes chunk-bottom {
+  0% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* || Circle */
+
+.circle {
+  animation: $animation-duration linear infinite eating-circle;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+  &::before {
+    background: #fff;
+    border-radius: 50%;
+    content: '';
+    height: 1em;
+    width: 1em;
+  }
+}
+
+@keyframes eating-circle {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
