@@ -2,7 +2,7 @@
 html,
 body {
   color: white;
-  font: 400 10px "Lato", sans-serif;
+  font: 400 10px 'Lato', sans-serif;
   height: 100%;
   margin: 0;
 }
@@ -26,19 +26,19 @@ body > div {
 }
 
 .bgimg-1 {
-  background-image: url("../img/autumn.jpg");
+  background-image: url('../img/autumn.jpg');
 }
 
 .bgimg-2 {
-  background-image: url("../img/winter.jpg");
+  background-image: url('../img/winter.jpg');
 }
 
 .bgimg-3 {
-  background-image: url("../img/spring.jpg");
+  background-image: url('../img/spring.jpg');
 }
 
 .bgimg-4 {
-  background-image: url("../img/summer.jpg");
+  background-image: url('../img/summer.jpg');
 }
 
 .caption {
