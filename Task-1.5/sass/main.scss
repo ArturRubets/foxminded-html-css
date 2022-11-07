@@ -14,7 +14,7 @@ body > div {
   box-shadow: 0 0 1em 0.6em black;
 }
 
-.bgimg {
+.bg-img {
   align-items: center;
   background-attachment: fixed;
   background-position: center;
@@ -27,19 +27,19 @@ body > div {
   background-origin: content-box;
 }
 
-.bgimg-1 {
+.bg-img-1 {
   background-image: url('../img/autumn.jpg');
 }
 
-.bgimg-2 {
+.bg-img-2 {
   background-image: url('../img/winter.jpg');
 }
 
-.bgimg-3 {
+.bg-img-3 {
   background-image: url('../img/spring.jpg');
 }
 
-.bgimg-4 {
+.bg-img-4 {
   background-image: url('../img/summer.jpg');
 }
 
@@ -51,7 +51,7 @@ body > div {
   text-transform: uppercase;
 }
 
-.bgimg-2 .caption,
-.bgimg-4 .caption {
+.bg-img-2 .caption,
+.bg-img-4 .caption {
   color: white;
 }
