@@ -1,0 +1,57 @@
+/* || General styles */
+
+html,
+body {
+  color: white;
+  font: 400 10px 'Lato', sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+/* || Parallax images */
+
+body > div {
+  box-shadow: 0 0 1em 0.6em black;
+}
+
+.bg-img {
+  align-items: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  opacity: 0.85;
+  background-origin: content-box;
+}
+
+.bg-img-1 {
+  background-image: url('../img/autumn.jpg');
+}
+
+.bg-img-2 {
+  background-image: url('../img/winter.jpg');
+}
+
+.bg-img-3 {
+  background-image: url('../img/spring.jpg');
+}
+
+.bg-img-4 {
+  background-image: url('../img/summer.jpg');
+}
+
+.caption {
+  color: black;
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+}
+
+.bg-img-2 .caption,
+.bg-img-4 .caption {
+  color: white;
+}
