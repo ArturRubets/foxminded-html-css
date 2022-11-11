@@ -1,0 +1,130 @@
+/* || General styles */
+html {
+  font-family: Verdana, sans-serif;
+  font-size: 10px;
+}
+
+body,
+pre,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h2,
+h3 {
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 2.2em;
+}
+
+h3 {
+  font-size: 1.7em;
+}
+
+code,
+pre,
+li,
+p,
+td,
+th {
+  font-size: 1.5em;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: unset;
+}
+a:hover,
+a:active {
+  color: #8cb4ff;
+}
+
+/* || Main */
+main {
+  color: #282a35;
+}
+main aside {
+  background-color: #eee;
+  border-right: 0.5px solid #ddd;
+  height: 100vh;
+  overflow: auto;
+  position: fixed;
+  width: 300px;
+}
+main aside nav h2,
+main aside nav li {
+  padding: 1.5rem;
+}
+main aside nav h2 {
+  margin: 0;
+}
+main aside nav li {
+  border-top: 0.5px solid #ddd;
+}
+main aside nav a {
+  text-decoration: none;
+}
+main section {
+  background-color: #fefefe;
+  margin-left: 300px;
+  padding: 1em 2em;
+  text-align: justify;
+}
+main section hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 4em -1.6em;
+}
+main section article {
+  margin-bottom: 2em;
+}
+main section article table {
+  border: 1px solid #ddd;
+  width: 100%;
+}
+main section article table tr:nth-child(even) {
+  background-color: #eee;
+}
+main section article table tr:nth-child(odd) {
+  background-color: #fefefe;
+}
+main section article table tr {
+  border-bottom: 1px solid #ddd;
+}
+main section article table th,
+main section article table td {
+  padding: 1rem 2rem;
+}
+main section article .browsers td {
+  text-align: center;
+}
+main section article .code {
+  background-color: #282a35;
+  border: 1px solid #ddd;
+  color: #fefefe;
+  padding: 1em;
+  word-wrap: break-word;
+}
+main section article .example {
+  background-color: #eee;
+  border-radius: 0.5em;
+  margin: 2em 0;
+  padding: 1em 2em;
+}
+
+/*# sourceMappingURL=main.css.map */
