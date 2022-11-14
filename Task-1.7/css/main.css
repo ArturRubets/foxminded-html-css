@@ -1,3 +1,185 @@
 /* || General styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: white;
+  font-family: sans-serif;
+  margin: 20px 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  background-color: #ededed;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+label {
+  cursor: pointer;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input[type='radio'] {
+  bottom: 0;
+  left: -9999px;
+  position: absolute;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1400px;
+  min-width: 800px;
+}
+
+/* || Slideshow */
+.featured-wrapper {
+  position: relative;
+}
+
+.featured-wrapper .featured-list {
+  display: grid;
+}
+
+.featured-wrapper .featured-list li {
+  display: none;
+  grid-column: 1;
+  grid-row: 1;
+  transition: opacity 0.5s;
+}
+
+.featured-wrapper .arrows::before,
+.featured-wrapper .arrows label::before {
+  left: 0;
+}
+
+.featured-wrapper .arrows::after,
+.featured-wrapper .arrows label::after {
+  right: 0;
+}
+
+.featured-wrapper .arrows::before,
+.featured-wrapper .arrows::after {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 22px 48px;
+  bottom: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 60px;
+}
+
+.featured-wrapper .arrows::before {
+  background-image: url(../img/arrow-left.svg);
+}
+
+.featured-wrapper .arrows::after {
+  background-image: url(../img/arrow-right.svg);
+}
+
+.featured-wrapper .arrows label::before,
+.featured-wrapper .arrows label::after {
+  bottom: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.25s;
+  width: 60px;
+  z-index: 1;
+}
+
+.featured-wrapper .dots {
+  bottom: 10px;
+  display: flex;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.featured-wrapper .dots li:not(:last-child) {
+  margin-right: 8px;
+}
+
+.featured-wrapper .dots label {
+  background: rgba(255, 255, 255, 0.5019607843);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1490196078);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.0196078431);
+  display: inline-block;
+  height: 10px;
+  transition: background 0.25s;
+  width: 10px;
+}
+
+.featured-wrapper .dots label:hover {
+  background: currentColor;
+}
+
+/* || Mimic click event */
+[id='image1']:checked ~ .container .featured-list li:nth-child(1),
+[id='image2']:checked ~ .container .featured-list li:nth-child(2),
+[id='image3']:checked ~ .container .featured-list li:nth-child(3),
+[id='image4']:checked ~ .container .featured-list li:nth-child(4),
+[id='image5']:checked ~ .container .featured-list li:nth-child(5),
+[id='image6']:checked ~ .container .featured-list li:nth-child(6),
+[id='image7']:checked ~ .container .featured-list li:nth-child(7),
+[id='image8']:checked ~ .container .featured-list li:nth-child(8) {
+  display: block;
+}
+
+[id^='image']:checked ~ .container .arrows [for^='image']:hover::before,
+[id^='image']:checked ~ .container .arrows [for^='image']:hover::after {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1490196078);
+}
+
+[id='image1']:checked ~ .container .arrows [for='image8']::before,
+[id='image2']:checked ~ .container .arrows [for='image1']::before,
+[id='image3']:checked ~ .container .arrows [for='image2']::before,
+[id='image4']:checked ~ .container .arrows [for='image3']::before,
+[id='image5']:checked ~ .container .arrows [for='image4']::before,
+[id='image6']:checked ~ .container .arrows [for='image5']::before,
+[id='image7']:checked ~ .container .arrows [for='image6']::before,
+[id='image8']:checked ~ .container .arrows [for='image7']::before {
+  content: '';
+}
+
+[id='image1']:checked ~ .container .arrows [for='image2']::after,
+[id='image2']:checked ~ .container .arrows [for='image3']::after,
+[id='image3']:checked ~ .container .arrows [for='image4']::after,
+[id='image4']:checked ~ .container .arrows [for='image5']::after,
+[id='image5']:checked ~ .container .arrows [for='image6']::after,
+[id='image6']:checked ~ .container .arrows [for='image7']::after,
+[id='image7']:checked ~ .container .arrows [for='image8']::after,
+[id='image8']:checked ~ .container .arrows [for='image1']::after {
+  content: '';
+}
+
+[id='image1']:checked ~ .container .dots [for='image1'],
+[id='image2']:checked ~ .container .dots [for='image2'],
+[id='image3']:checked ~ .container .dots [for='image3'],
+[id='image4']:checked ~ .container .dots [for='image4'],
+[id='image5']:checked ~ .container .dots [for='image5'],
+[id='image6']:checked ~ .container .dots [for='image6'],
+[id='image7']:checked ~ .container .dots [for='image7'],
+[id='image8']:checked ~ .container .dots [for='image8'] {
+  background: currentColor;
+  border-color: rgba(0, 0, 0, 0.2509803922);
+  box-shadow: none;
+  cursor: default;
+}
 
 /*# sourceMappingURL=main.css.map */
