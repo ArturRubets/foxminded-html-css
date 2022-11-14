@@ -1,13 +1,7 @@
 /* || General styles */
 
-$transition-items: 0.5s;
+$transition-images: 0.5s;
 $transition: 0.25s;
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
 body {
   color: white;
@@ -17,6 +11,8 @@ body {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -28,7 +24,6 @@ img {
 
 label {
   cursor: pointer;
-  display: block;
 }
 
 a {
@@ -52,85 +47,96 @@ input[type='radio'] {
 
 .featured-wrapper {
   position: relative;
-}
 
-.featured-wrapper .featured-list {
-  display: grid;
-}
+  .featured-list {
+    display: grid;
 
-.featured-wrapper .featured-list li {
-  display: none;
-  grid-column: 1;
-  grid-row: 1;
-  transition: opacity $transition-items;
-}
+    li {
+      grid-column: 1;
+      grid-row: 1;
+      max-height: 560px;
+      opacity: 0;
+      transition: opacity $transition-images;
+    }
+  }
 
-.featured-wrapper .arrows::before,
-.featured-wrapper .arrows label::before {
-  left: 0;
-}
+  .arrows {
+    &::before,
+    &::after {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 22px 48px;
+      bottom: 0;
+      content: '';
+      opacity: 0.7;
+      position: absolute;
+      top: 0;
+      transition: opacity $transition;
+      width: 60px;
+    }
 
-.featured-wrapper .arrows::after,
-.featured-wrapper .arrows label::after {
-  right: 0;
-}
+    &::before {
+      background-image: url(../img/arrow-left.svg);
+      left: 0;
+    }
 
-.featured-wrapper .arrows::before,
-.featured-wrapper .arrows::after {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 22px 48px;
-  bottom: 0;
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 60px;
-}
+    &::after {
+      background-image: url(../img/arrow-right.svg);
+      right: 0;
+    }
 
-.featured-wrapper .arrows::before {
-  background-image: url(../img/arrow-left.svg);
-}
+    label {
+      &:hover::before,
+      &:hover::after {
+        background: #ffffff33;
+        box-shadow: 0 0 2px #00000026;
+      }
 
-.featured-wrapper .arrows::after {
-  background-image: url(../img/arrow-right.svg);
-}
+      &::before,
+      &::after {
+        bottom: 0;
+        position: absolute;
+        top: 0;
+        width: 60px;
+        z-index: 1;
+      }
 
-.featured-wrapper .arrows label::before,
-.featured-wrapper .arrows label::after {
-  bottom: 0;
-  opacity: 0.5;
-  position: absolute;
-  top: 0;
-  transition: opacity $transition;
-  width: 60px;
-  z-index: 1;
-}
+      &::before {
+        left: 0;
+      }
 
-.featured-wrapper .dots {
-  bottom: 10px;
-  display: flex;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-}
+      &::after {
+        right: 0;
+      }
+    }
+  }
 
-.featured-wrapper .dots li:not(:last-child) {
-  margin-right: 8px;
-}
+  .dots {
+    bottom: 10px;
+    display: flex;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
 
-.featured-wrapper .dots label {
-  background: #ffffff80;
-  border-radius: 50%;
-  border: 1px solid #00000026;
-  box-shadow: inset 0 0 6px #00000005;
-  display: inline-block;
-  height: 10px;
-  transition: background $transition;
-  width: 10px;
-}
+    li:not(:last-child) {
+      margin-right: 8px;
+    }
 
-.featured-wrapper .dots label:hover {
-  background: currentColor;
+    label {
+      background: #ffffff80;
+      border-radius: 50%;
+      border: 1px solid #00000026;
+      box-shadow: inset 0 0 6px #00000005;
+      display: inline-block;
+      height: 10px;
+      transition: background $transition;
+      width: 10px;
+
+      &:hover {
+        background: currentColor;
+      }
+    }
+  }
 }
 
 /* || Mimic click event */
@@ -143,13 +149,7 @@ input[type='radio'] {
 [id='image6']:checked ~ .container .featured-list li:nth-child(6),
 [id='image7']:checked ~ .container .featured-list li:nth-child(7),
 [id='image8']:checked ~ .container .featured-list li:nth-child(8) {
-  display: block;
-}
-
-[id^='image']:checked ~ .container .arrows [for^='image']:hover::before,
-[id^='image']:checked ~ .container .arrows [for^='image']:hover::after {
-  background: #ffffff33;
-  box-shadow: 0 0 2px #00000026;
+  opacity: 1;
 }
 
 [id='image1']:checked ~ .container .arrows [for='image8']::before,
