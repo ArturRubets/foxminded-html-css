@@ -718,30 +718,26 @@ section {
 
 /* Section 5 */
 .download {
-  padding-left: 152px;
   position: relative;
-}
-@media screen and (max-width: 1024px) {
-  .download {
-    padding-left: 30px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .download {
-    padding-left: 0;
-  }
 }
 .download .container {
   align-items: center;
   display: flex;
   justify-content: center;
-  margin: 0;
+  left: -39px;
   max-width: 1058px;
   padding-bottom: 12.3rem;
+  position: relative;
+}
+@media screen and (max-width: 1130px) {
+  .download .container {
+    left: -10px;
+  }
 }
 @media screen and (max-width: 768px) {
   .download .container {
     flex-direction: column;
+    left: 0;
   }
 }
 .download .container .image {

@@ -752,25 +752,22 @@ section {
 /* Section 5 */
 
 .download {
-  padding-left: 152px;
   position: relative;
-  @media screen and (max-width: $laptop-width) {
-    padding-left: 30px;
-  }
-  @media screen and (max-width: $tablet-width) {
-    padding-left: 0;
-  }
 
   .container {
     align-items: center;
     display: flex;
     justify-content: center;
-    margin: 0;
+    left: -39px;
     max-width: 1058px;
     padding-bottom: 12.3rem;
-
+    position: relative;
+    @media screen and (max-width: 1130px) {
+      left: -10px;
+    }
     @media screen and (max-width: $tablet-width) {
       flex-direction: column;
+      left: 0;
     }
 
     .image {
