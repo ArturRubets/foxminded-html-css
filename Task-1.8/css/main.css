@@ -220,12 +220,6 @@ section {
   user-select: none;
   visibility: hidden;
 }
-@media speech {
-  .introduction .container header nav ul#nav-menu a::after,
-.introduction .container header nav ul#nav-menu-mobile a::after {
-    display: none;
-  }
-}
 .introduction .container header nav ul#nav-menu a:hover,
 .introduction .container header nav ul#nav-menu-mobile a:hover {
   color: #4a99d3;
