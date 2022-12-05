@@ -179,14 +179,14 @@ section {
           z-index: 1;
         }
 
-        [id='menu-open']:checked ~ #nav-menu {
+        [id='menu-open']:checked ~ #nav-menu-mobile {
           @media screen and (max-width: $tablet-width) {
             max-height: 0;
             opacity: 0;
           }
         }
 
-        [id='menu-close']:checked ~ #nav-menu {
+        [id='menu-close']:checked ~ #nav-menu-mobile {
           @media screen and (max-width: $tablet-width) {
             max-height: 600px;
             opacity: 1;
@@ -219,52 +219,61 @@ section {
           }
         }
 
+        ul#nav-menu,
+        ul#nav-menu-mobile {
+          a {
+            align-items: center;
+            color: $violet;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.8rem;
+            line-height: 1.0327777778;
+
+            // Remove wiggle when hovering
+            &::after {
+              content: attr(data-text);
+              font-weight: 500;
+              height: 0;
+              overflow: hidden;
+              pointer-events: none;
+              user-select: none;
+              visibility: hidden;
+
+              @media speech {
+                display: none;
+              }
+            }
+
+            &:hover {
+              color: $blue;
+              font-weight: 500;
+            }
+          }
+        }
+
         ul#nav-menu {
-          align-items: center;
           display: flex;
           justify-content: space-between;
-          max-width: 313px;
-          transition: opacity 1s ease, max-height 1s ease;
           @media screen and (max-width: $tablet-width) {
-            align-items: center;
-            flex-basis: 100%;
-            flex-direction: column;
-            max-width: 100%;
+            display: none;
           }
 
           li {
             padding-right: 3.3rem;
-            @media screen and (max-width: $tablet-width) {
+          }
+        }
+
+        ul#nav-menu-mobile {
+          display: none;
+          @media screen and (max-width: $tablet-width) {
+            display: flex;
+            flex-basis: 100%;
+            flex-direction: column;
+            max-width: 100%;
+            transition: opacity 1s ease, max-height 1s ease;
+
+            li {
               padding: 1.8rem 2rem;
-            }
-
-            a {
-              align-items: center;
-              color: $violet;
-              display: flex;
-              flex-direction: column;
-              font-size: 1.8rem;
-              line-height: 1.0327777778;
-
-              // Remove wiggle when hovering
-              &::after {
-                content: attr(data-text);
-                font-weight: 500;
-                height: 0;
-                overflow: hidden;
-                pointer-events: none;
-                user-select: none;
-                visibility: hidden;
-
-                @media speech {
-                  display: none;
-                }
-              }
-
-              &:hover {
-                color: $blue;
-                font-weight: 500;
-              }
             }
           }
         }

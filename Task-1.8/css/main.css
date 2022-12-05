@@ -165,13 +165,13 @@ section {
   z-index: 1;
 }
 @media screen and (max-width: 768px) {
-  .introduction .container header nav [id=menu-open]:checked ~ #nav-menu {
+  .introduction .container header nav [id=menu-open]:checked ~ #nav-menu-mobile {
     max-height: 0;
     opacity: 0;
   }
 }
 @media screen and (max-width: 768px) {
-  .introduction .container header nav [id=menu-close]:checked ~ #nav-menu {
+  .introduction .container header nav [id=menu-close]:checked ~ #nav-menu-mobile {
     max-height: 600px;
     opacity: 1;
   }
@@ -201,30 +201,8 @@ section {
   max-width: 24px;
   width: 100%;
 }
-.introduction .container header nav ul#nav-menu {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  max-width: 313px;
-  transition: opacity 1s ease, max-height 1s ease;
-}
-@media screen and (max-width: 768px) {
-  .introduction .container header nav ul#nav-menu {
-    align-items: center;
-    flex-basis: 100%;
-    flex-direction: column;
-    max-width: 100%;
-  }
-}
-.introduction .container header nav ul#nav-menu li {
-  padding-right: 3.3rem;
-}
-@media screen and (max-width: 768px) {
-  .introduction .container header nav ul#nav-menu li {
-    padding: 1.8rem 2rem;
-  }
-}
-.introduction .container header nav ul#nav-menu li a {
+.introduction .container header nav ul#nav-menu a,
+.introduction .container header nav ul#nav-menu-mobile a {
   align-items: center;
   color: #0f001a;
   display: flex;
@@ -232,7 +210,8 @@ section {
   font-size: 1.8rem;
   line-height: 1.0327777778;
 }
-.introduction .container header nav ul#nav-menu li a::after {
+.introduction .container header nav ul#nav-menu a::after,
+.introduction .container header nav ul#nav-menu-mobile a::after {
   content: attr(data-text);
   font-weight: 500;
   height: 0;
@@ -242,13 +221,42 @@ section {
   visibility: hidden;
 }
 @media speech {
-  .introduction .container header nav ul#nav-menu li a::after {
+  .introduction .container header nav ul#nav-menu a::after,
+.introduction .container header nav ul#nav-menu-mobile a::after {
     display: none;
   }
 }
-.introduction .container header nav ul#nav-menu li a:hover {
+.introduction .container header nav ul#nav-menu a:hover,
+.introduction .container header nav ul#nav-menu-mobile a:hover {
   color: #4a99d3;
   font-weight: 500;
+}
+.introduction .container header nav ul#nav-menu {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .introduction .container header nav ul#nav-menu {
+    display: none;
+  }
+}
+.introduction .container header nav ul#nav-menu li {
+  padding-right: 3.3rem;
+}
+.introduction .container header nav ul#nav-menu-mobile {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .introduction .container header nav ul#nav-menu-mobile {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    max-width: 100%;
+    transition: opacity 1s ease, max-height 1s ease;
+  }
+  .introduction .container header nav ul#nav-menu-mobile li {
+    padding: 1.8rem 2rem;
+  }
 }
 .introduction .container .content {
   display: flex;
