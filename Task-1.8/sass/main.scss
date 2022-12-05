@@ -565,7 +565,6 @@ section {
 .clients {
   padding-bottom: 11.8rem;
   padding-top: 15rem;
-  position: relative;
 
   .container {
     max-width: 100%;
@@ -587,8 +586,11 @@ section {
     }
 
     .slider {
+      position: relative;
+
       input[type='radio'] {
-        bottom: 0;
+        left: 50%;
+        top: 50%;
       }
 
       [id='image1']:checked ~ ul li:nth-child(1),

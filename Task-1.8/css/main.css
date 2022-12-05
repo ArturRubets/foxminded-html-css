@@ -528,7 +528,6 @@ section {
 .clients {
   padding-bottom: 11.8rem;
   padding-top: 15rem;
-  position: relative;
 }
 .clients .container {
   max-width: 100%;
@@ -549,8 +548,12 @@ section {
     padding-right: 0;
   }
 }
+.clients .container .slider {
+  position: relative;
+}
 .clients .container .slider input[type=radio] {
-  bottom: 0;
+  left: 50%;
+  top: 50%;
 }
 .clients .container .slider [id=image1]:checked ~ ul li:nth-child(1),
 .clients .container .slider [id=image2]:checked ~ ul li:nth-child(2),
