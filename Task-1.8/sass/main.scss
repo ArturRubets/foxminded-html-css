@@ -105,7 +105,7 @@ a {
   max-width: 195px;
   min-width: 100px;
   position: absolute;
-  width: 17.70833333%;
+  width: 17%;
   z-index: -1;
 }
 
@@ -126,7 +126,7 @@ section {
         rgba(74, 153, 211, 0) 75.91%
       ),
       #fff;
-    box-shadow: 0px 4px 16px rgba(75, 0, 129, 0.26);
+    box-shadow: 0 4px 16px rgba(75, 0, 129, 0.26);
     height: 100%;
     left: 0;
     opacity: 0.2;
@@ -169,7 +169,7 @@ section {
           color: $blue;
           font-size: 4rem;
           font-weight: 700;
-          line-height: 1.038;
+          line-height: 1.04;
           text-transform: uppercase;
         }
 
@@ -227,7 +227,7 @@ section {
             display: flex;
             flex-direction: column;
             font-size: 1.8rem;
-            line-height: 1.0327777778;
+            line-height: 1.03;
 
             // Remove wiggle when hovering
             &::after {
@@ -401,13 +401,13 @@ section {
         }
 
         &:first-child {
-          margin-right: 18.42105263%;
+          margin-right: 18.42%;
           @media screen and (max-width: $tablet-width) {
             margin: 0;
           }
 
           > *:not(h2) {
-            right: -22.36842105%;
+            right: -22.37%;
             @media screen and (max-width: $tablet-width) {
               right: 0;
             }
@@ -418,7 +418,7 @@ section {
           font-size: 3.6rem;
           font-weight: 500;
           letter-spacing: 0.05em;
-          line-height: 1.2777777778;
+          line-height: 1.28;
           max-width: 395px;
           padding-bottom: 5.7rem;
           @media screen and (max-width: $laptop-width) {
@@ -444,18 +444,18 @@ section {
           }
 
           .square-dots-1 {
-            right: calc(-77px / $width * 100%);
-            top: calc(-77px / 522px * 100%);
+            right: -77px;
+            top: -77px;
           }
 
           .square-dots-2 {
-            left: calc(-105px / $width * 100%);
-            top: calc(216px / 522px * 100%);
+            left: -105px;
+            top: 216px;
           }
 
           .square-dots-3 {
-            bottom: calc(-71px / 522px * 100%);
-            right: calc(-72px / $width * 100%);
+            bottom: -71px;
+            right: -72px;
           }
 
           .image-container {
@@ -487,7 +487,7 @@ section {
 
             p {
               font-size: 1.6rem;
-              line-height: 1.625;
+              line-height: 1.63;
               margin-bottom: 5.2rem;
               opacity: 0.6;
             }
@@ -501,7 +501,7 @@ section {
                 color: $blue;
                 font-size: 1.4rem;
                 font-weight: 500;
-                line-height: 2.1428571429;
+                line-height: 2.14;
               }
 
               img {
@@ -647,11 +647,14 @@ section {
 
           .image {
             background: rgba(74, 153, 211, 0.1);
-            border-radius: 0px 6px 6px 0px;
+            border-radius: 0 6px 6px 0;
             height: 400px;
             margin-right: 10rem;
             position: relative;
-            width: calc(677px / 1195px * 100%);
+            width: 47.5%;
+            @media screen and (max-width: $laptop-width) {
+              margin-right: 5rem;
+            }
             @media screen and (max-width: $tablet-width) {
               margin-bottom: 3rem;
               margin-right: 0;
@@ -662,10 +665,9 @@ section {
               bottom: 0;
               max-height: 519px;
               position: absolute;
-              right: calc(100px / 677px * 100%);
+              right: 100px;
               width: 399px;
               @media screen and (max-width: 1120px) {
-                left: 0;
                 width: 330px;
               }
               @media screen and (max-width: $tablet-width) {
@@ -709,7 +711,7 @@ section {
               .arrows {
                 background: #fff;
                 border-radius: 4px;
-                box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
                 display: flex;
                 height: max-content;
                 @media screen and (max-width: $tablet-width) {
@@ -732,7 +734,7 @@ section {
 
                 .arrow-left {
                   background: $blue;
-                  border-radius: 4px 0px 0px 4px;
+                  border-radius: 4px 0 0 4px;
                 }
               }
             }
@@ -855,7 +857,7 @@ footer {
     .footer-top {
       display: flex;
       justify-content: center;
-      padding: 5.5rem 8.611111111% 1.9rem;
+      padding: 5.5rem 8.61% 1.9rem;
       position: relative;
       @media screen and (max-width: 1200px) {
         padding-left: 5%;
@@ -934,7 +936,7 @@ footer {
                 height: 2px;
                 left: 0;
                 position: absolute;
-                width: 92.52336449%;
+                width: 92.52%;
               }
             }
 
@@ -959,7 +961,7 @@ footer {
           color: #fff;
           display: block;
           font-size: 1.8rem;
-          line-height: 1.4444444444;
+          line-height: 1.44;
           margin-bottom: 2rem;
         }
 
@@ -1012,7 +1014,7 @@ footer {
 
       p {
         color: #fff;
-        font-size: 1.041rem;
+        font-size: 1.04rem;
         font-weight: 700;
         text-align: center;
         @media screen and (max-width: $tablet-width) {

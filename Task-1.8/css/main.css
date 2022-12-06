@@ -92,7 +92,7 @@ a {
   max-width: 195px;
   min-width: 100px;
   position: absolute;
-  width: 17.70833333%;
+  width: 17%;
   z-index: -1;
 }
 
@@ -107,7 +107,7 @@ section {
 }
 .introduction .background {
   background: linear-gradient(1.02deg, #4a99d3 -17.33%, rgba(74, 153, 211, 0) 75.91%), #fff;
-  box-shadow: 0px 4px 16px rgba(75, 0, 129, 0.26);
+  box-shadow: 0 4px 16px rgba(75, 0, 129, 0.26);
   height: 100%;
   left: 0;
   opacity: 0.2;
@@ -156,7 +156,7 @@ section {
   color: #4a99d3;
   font-size: 4rem;
   font-weight: 700;
-  line-height: 1.038;
+  line-height: 1.04;
   text-transform: uppercase;
 }
 .introduction .container header nav [id=menu-open]:checked ~ div label.icon-close,
@@ -208,7 +208,7 @@ section {
   display: flex;
   flex-direction: column;
   font-size: 1.8rem;
-  line-height: 1.0327777778;
+  line-height: 1.03;
 }
 .introduction .container header nav ul#nav-menu a::after,
 .introduction .container header nav ul#nav-menu-mobile a::after {
@@ -378,7 +378,7 @@ section {
   }
 }
 .opportunities .container .content .col:first-child {
-  margin-right: 18.42105263%;
+  margin-right: 18.42%;
 }
 @media screen and (max-width: 768px) {
   .opportunities .container .content .col:first-child {
@@ -386,7 +386,7 @@ section {
   }
 }
 .opportunities .container .content .col:first-child > *:not(h2) {
-  right: -22.36842105%;
+  right: -22.37%;
 }
 @media screen and (max-width: 768px) {
   .opportunities .container .content .col:first-child > *:not(h2) {
@@ -397,7 +397,7 @@ section {
   font-size: 3.6rem;
   font-weight: 500;
   letter-spacing: 0.05em;
-  line-height: 1.2777777778;
+  line-height: 1.28;
   max-width: 395px;
   padding-bottom: 5.7rem;
 }
@@ -427,16 +427,16 @@ section {
   }
 }
 .opportunities .container .content .col .card .square-dots-1 {
-  right: -20.2631578947%;
-  top: -14.7509578544%;
+  right: -77px;
+  top: -77px;
 }
 .opportunities .container .content .col .card .square-dots-2 {
-  left: -27.6315789474%;
-  top: 41.3793103448%;
+  left: -105px;
+  top: 216px;
 }
 .opportunities .container .content .col .card .square-dots-3 {
-  bottom: -13.601532567%;
-  right: -18.9473684211%;
+  bottom: -71px;
+  right: -72px;
 }
 .opportunities .container .content .col .card .image-container {
   padding-top: 2rem;
@@ -466,7 +466,7 @@ section {
 }
 .opportunities .container .content .col .card .container p {
   font-size: 1.6rem;
-  line-height: 1.625;
+  line-height: 1.63;
   margin-bottom: 5.2rem;
   opacity: 0.6;
 }
@@ -477,7 +477,7 @@ section {
   color: #4a99d3;
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 2.1428571429;
+  line-height: 2.14;
 }
 .opportunities .container .content .col .card .container .learn-more img {
   height: 24px;
@@ -610,11 +610,16 @@ section {
 }
 .clients .container .slider ul li .image {
   background: rgba(74, 153, 211, 0.1);
-  border-radius: 0px 6px 6px 0px;
+  border-radius: 0 6px 6px 0;
   height: 400px;
   margin-right: 10rem;
   position: relative;
-  width: 56.6527196653%;
+  width: 47.5%;
+}
+@media screen and (max-width: 1024px) {
+  .clients .container .slider ul li .image {
+    margin-right: 5rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .clients .container .slider ul li .image {
@@ -627,12 +632,11 @@ section {
   bottom: 0;
   max-height: 519px;
   position: absolute;
-  right: 14.7710487445%;
+  right: 100px;
   width: 399px;
 }
 @media screen and (max-width: 1120px) {
   .clients .container .slider ul li .image img {
-    left: 0;
     width: 330px;
   }
 }
@@ -675,7 +679,7 @@ section {
 .clients .container .slider ul li .quote .container .arrows {
   background: #fff;
   border-radius: 4px;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   display: flex;
   height: max-content;
 }
@@ -701,7 +705,7 @@ section {
 }
 .clients .container .slider ul li .quote .container .arrows .arrow-left {
   background: #4a99d3;
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0 0 4px;
 }
 .clients .container .square-dots-1 {
   right: 0;
@@ -813,7 +817,7 @@ footer .container {
 footer .container .footer-top {
   display: flex;
   justify-content: center;
-  padding: 5.5rem 8.611111111% 1.9rem;
+  padding: 5.5rem 8.61% 1.9rem;
   position: relative;
 }
 @media screen and (max-width: 1200px) {
@@ -905,7 +909,7 @@ footer .container .footer-top .links ul li span::after {
   height: 2px;
   left: 0;
   position: absolute;
-  width: 92.52336449%;
+  width: 92.52%;
 }
 footer .container .footer-top .links ul li a {
   font-size: 1.4rem;
@@ -928,7 +932,7 @@ footer .container .footer-top form label {
   color: #fff;
   display: block;
   font-size: 1.8rem;
-  line-height: 1.4444444444;
+  line-height: 1.44;
   margin-bottom: 2rem;
 }
 footer .container .footer-top form .container {
@@ -978,7 +982,7 @@ footer .container .footer-bottom {
 }
 footer .container .footer-bottom p {
   color: #fff;
-  font-size: 1.041rem;
+  font-size: 1.04rem;
   font-weight: 700;
   text-align: center;
 }
