@@ -128,11 +128,6 @@ section {
 }
 @media screen and (max-width: 1200px) {
   .introduction .container {
-    right: -20px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .introduction .container {
     right: 0;
   }
 }
@@ -637,6 +632,7 @@ section {
 }
 @media screen and (max-width: 1120px) {
   .clients .container .slider ul li .image img {
+    right: 0;
     width: 330px;
   }
 }

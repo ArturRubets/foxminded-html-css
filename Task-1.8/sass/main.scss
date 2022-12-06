@@ -144,9 +144,6 @@ section {
       right: -40px;
     }
     @media screen and (max-width: 1200px) {
-      right: -20px;
-    }
-    @media screen and (max-width: $laptop-width) {
       right: 0;
     }
 
@@ -668,6 +665,7 @@ section {
               right: 100px;
               width: 399px;
               @media screen and (max-width: 1120px) {
+                right: 0;
                 width: 330px;
               }
               @media screen and (max-width: $tablet-width) {
